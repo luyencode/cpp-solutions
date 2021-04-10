@@ -8,25 +8,25 @@
 
 long tong(int n)
 {
-	long s = 0;
-	int i = 1;
-	while(i <= n)
-	{
-		s = s + i;
-		i++;
-	}
-	return s;
+    long s = 0;
+    int i = 1;
+    while(i <= n)
+    {
+        s = s + i;
+        i++;
+    }
+    return s;
 }
 
 int main()
 {
-	int n;
-	printf("\nNhap n: ");
-	scanf("%d", &n);
-	
-	long ketqua = tong(n);
-	printf("\nTong = %ld", ketqua);
+    int n;
+    printf("\nNhap n: ");
+    scanf("%d", &n);
+    
+    long ketqua = tong(n);
+    printf("\nTong = %ld", ketqua);
 
-	getch();
-	return 0;
+    getch();
+    return 0;
 }

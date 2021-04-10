@@ -10,28 +10,28 @@
 
 void nhap (int a[], int &n)
 {
-	do
-	{
-		printf("\nNhap so phan tu: ");
-		scanf("%d", &n);
-		if(n <= 0 || n > MAX)
-		{
-			printf("\nSo phan tu khong hop le. Xin kiem tra lai !");
-		}
-	}while(n <= 0 || n > MAX);
-	for(int i = 0; i < n; i++)
-	{
-		printf("\nNhap a[%d]: ", i);
-		scanf("%d", &a[i]);
-	}
+    do
+    {
+        printf("\nNhap so phan tu: ");
+        scanf("%d", &n);
+        if(n <= 0 || n > MAX)
+        {
+            printf("\nSo phan tu khong hop le. Xin kiem tra lai !");
+        }
+    }while(n <= 0 || n > MAX);
+    for(int i = 0; i < n; i++)
+    {
+        printf("\nNhap a[%d]: ", i);
+        scanf("%d", &a[i]);
+    }
 }
 
 void xuat(int a[], int n)
 {
-	for(int i = 0; i < n; i++)
-	{
-		printf("%8d", a[i]);
-	}
+    for(int i = 0; i < n; i++)
+    {
+        printf("%8d", a[i]);
+    }
 }
 /*
 
@@ -43,18 +43,18 @@ Giá trị: 0 2 1 2 2 0 0 0 0 0
 */
 void DemChuSo(int a[], int n, int b[])
 {
-	// Duyệt mảng a
-	for (int i = 0; i < n; i++)
-	{
-		int themang = abs(a[i]);
-		while (themang != 0)
-		{
-			int ChuSo = themang % 10;
-			themang /= 10;
+    // Duyệt mảng a
+    for (int i = 0; i < n; i++)
+    {
+        int themang = abs(a[i]);
+        while (themang != 0)
+        {
+            int ChuSo = themang % 10;
+            themang /= 10;
 
-			b[ChuSo]++;
-		}
-	}
+            b[ChuSo]++;
+        }
+    }
 }
 int TimChuSoXuatItNhat(int a[], int n, int b[])
 {
@@ -72,27 +72,27 @@ int TimChuSoXuatItNhat(int a[], int n, int b[])
 
 int main()
 {
-	int n;
-	int a[MAX];
+    int n;
+    int a[MAX];
 
-	nhap(a, n);
-	xuat(a, n);
+    nhap(a, n);
+    xuat(a, n);
 
-	int b[10] = {0};
-	DemChuSo(a, n, b);
-	for (int i = 0; i < 10; i++)
-	{
-		// Chỉ xét những chữ số có số lần xuất hiện > 0
-		if (b[i] != 0)
-		{
-			printf("\nChu so %d xuat hien %d lan", i, b[i]);
+    int b[10] = {0};
+    DemChuSo(a, n, b);
+    for (int i = 0; i < 10; i++)
+    {
+        // Chỉ xét những chữ số có số lần xuất hiện > 0
+        if (b[i] != 0)
+        {
+            printf("\nChu so %d xuat hien %d lan", i, b[i]);
 
-		}
-	}
+        }
+    }
 
-	int ChuSoMin = TimChuSoXuatItNhat(a, n, b);
+    int ChuSoMin = TimChuSoXuatItNhat(a, n, b);
         printf ("\nChu so xuat hien it nhat la %d",ChuSoMin);
 
-	getch();
-	return 0;
+    getch();
+    return 0;
 }

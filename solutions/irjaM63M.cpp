@@ -8,19 +8,19 @@
 
 long Tong(int n)
 {
-	if(n == 0)
-		return 0;
-	return Tong(n - 1) + n;
+    if(n == 0)
+        return 0;
+    return Tong(n - 1) + n;
 }
 
 int main()
 {
-	int n, S;
-	printf("\Nhap n = "); scanf("%d", &n);
+    int n, S;
+    printf("\Nhap n = "); scanf("%d", &n);
 
-	S = Tong(n);
-	printf("S = %d", S);
+    S = Tong(n);
+    printf("S = %d", S);
 
-	getch();
-	return 0;
+    getch();
+    return 0;
 }

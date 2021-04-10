@@ -7,24 +7,24 @@
 using namespace std;
 struct ThiSinh
 {
-	char MaThiSinh[5];
-	char HoTen[30];
-	float DiemToan;
-	float DiemLy;
-	float DiemHoa;
-	float DiemTongCong;
+    char MaThiSinh[5];
+    char HoTen[30];
+    float DiemToan;
+    float DiemLy;
+    float DiemHoa;
+    float DiemTongCong;
 };
 typedef struct ThiSinh THISINH;
 
 struct Node
 {
-	THISINH data;
-	struct Node *pNext;
+    THISINH data;
+    struct Node *pNext;
 };
 typedef struct Node NODE;
 
 struct List
 {
-	NODE *pHead, *pTail;
+    NODE *pHead, *pTail;
 };
 typedef struct List LIST;

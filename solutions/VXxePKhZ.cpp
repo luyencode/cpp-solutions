@@ -8,19 +8,19 @@
 
 long GiaiThua(int n)
 {
-	if(n == 0)
-		return 1;
-	return GiaiThua(n - 1) * n;
+    if(n == 0)
+        return 1;
+    return GiaiThua(n - 1) * n;
 }
 
 int main()
 {
-	int n, T;
-	printf("\Nhap n = "); scanf("%d", &n);
+    int n, T;
+    printf("\Nhap n = "); scanf("%d", &n);
 
-	T = GiaiThua(n);
-	printf("T = %d", T);
+    T = GiaiThua(n);
+    printf("T = %d", T);
 
-	getch();
-	return 0;
+    getch();
+    return 0;
 }

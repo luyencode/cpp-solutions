@@ -8,29 +8,29 @@
 
 int main()
 {
-	int i, n;
-	float S, T;
+    int i, n;
+    float S, T;
     i = 1;
-	S = 0;
-	T = 0;
-	do
-	{
-	printf("\nNhap n: ");
-	scanf("%d", &n);
-	  if(n < 1)
-	   {
-		printf("\nN phai >= 1. Xin Nhap lai!");
-	   }
-	}while(n < 1);
+    S = 0;
+    T = 0;
+    do
+    {
+    printf("\nNhap n: ");
+    scanf("%d", &n);
+      if(n < 1)
+       {
+        printf("\nN phai >= 1. Xin Nhap lai!");
+       }
+    }while(n < 1);
 
-	while(i <= n)
-	{
-		T = T + i;
-		S = S + 1.0 / T;
-		i++;
-	}
-	printf("\nTong la %f", S);
+    while(i <= n)
+    {
+        T = T + i;
+        S = S + 1.0 / T;
+        i++;
+    }
+    printf("\nTong la %f", S);
 
-	getch();
-	return 0;
+    getch();
+    return 0;
 }

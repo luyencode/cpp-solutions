@@ -10,32 +10,32 @@
 
 void nhap (float a[], int &n)
 {
-	do
-	{
-		printf("\nNhap so phan tu: ");
-		scanf("%d", &n);
-		if(n <= 0 || n > MAX)
-		{
-			printf("\nSo phan tu khong hop le. Xin kiem tra lai !");
-		}
-	}while(n <= 0 || n > MAX);
-	for(int i = 0; i < n; i++)
-	{
-		printf("\nNhap a[%d]: ", i);
-		scanf("%f", &a[i]);
-	}
+    do
+    {
+        printf("\nNhap so phan tu: ");
+        scanf("%d", &n);
+        if(n <= 0 || n > MAX)
+        {
+            printf("\nSo phan tu khong hop le. Xin kiem tra lai !");
+        }
+    }while(n <= 0 || n > MAX);
+    for(int i = 0; i < n; i++)
+    {
+        printf("\nNhap a[%d]: ", i);
+        scanf("%f", &a[i]);
+    }
 }
 
 void xuat(float a[], int n)
 {
-	for(int i = 0; i < n; i++)
-	{
-		printf("%8.3f", a[i]);
-	}
+    for(int i = 0; i < n; i++)
+    {
+        printf("%8.3f", a[i]);
+    }
 }
 int timvitriduongnhonhat(float a[], int n)
 {
-	int i;
+    int i;
     int min;
     int dem = 0 ;
     for (i = 0; i < n; i++)
@@ -60,15 +60,15 @@ int timvitriduongnhonhat(float a[], int n)
 }
 int main()
 {
-	int n;
-	float a[MAX];
+    int n;
+    float a[MAX];
 
-	nhap(a, n);
-	xuat(a, n);
+    nhap(a, n);
+    xuat(a, n);
 
-	int vitriduongnhonhat = timvitriduongnhonhat(a, n);
-	printf("\nVi tri gia tri duong nho nhat la %d", vitriduongnhonhat);
+    int vitriduongnhonhat = timvitriduongnhonhat(a, n);
+    printf("\nVi tri gia tri duong nho nhat la %d", vitriduongnhonhat);
 
-	getch();
-	return 0;
+    getch();
+    return 0;
 }

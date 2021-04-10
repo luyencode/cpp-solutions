@@ -5,13 +5,13 @@
 
 NODE* getnode(KieuDuLieu x)
 {
-	NODE* p;
-	p = new NODE;
-	if(p == NULL)
-		return NULL;
+    NODE* p;
+    p = new NODE;
+    if(p == NULL)
+        return NULL;
 
-	p->info = x;
-	p->pNext = NULL;
+    p->info = x;
+    p->pNext = NULL;
 
-	return p;
+    return p;
 }

@@ -12,32 +12,32 @@
 */
 int StringLength(char s[])
 {
-	int i = 0; 
-	while(s[i] != '\0')
-	{
-		i++;
-	}
-	return i;
+    int i = 0; 
+    while(s[i] != '\0')
+    {
+        i++;
+    }
+    return i;
 }
 
 int STRLEN(char *s)
 {
-	int dem = 0;
-	while(s[dem] != '\0')
-	{
-		dem++;
-	}
-	return dem;	
+    int dem = 0;
+    while(s[dem] != '\0')
+    {
+        dem++;
+    }
+    return dem;    
 }
 int main()
 {
-	char s[] = "Hello World";
-	int length = StringLength(s);
-	printf("\nDo dai cua chuoi s la: %d", length);
+    char s[] = "Hello World";
+    int length = StringLength(s);
+    printf("\nDo dai cua chuoi s la: %d", length);
 
-	int len = STRLEN(s);
-	printf("\nDo dai cua chuoi s la: %d", len);
+    int len = STRLEN(s);
+    printf("\nDo dai cua chuoi s la: %d", len);
 
-	getch();
-	return 0;
+    getch();
+    return 0;
 }

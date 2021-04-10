@@ -8,29 +8,29 @@
 #include<math.h>
 int main()
 {
-	int i, n;
-	float S;
-	do
-	{
-		printf("\nNhap n(n >= 1): ");
-		scanf("%d", &n);
+    int i, n;
+    float S;
+    do
+    {
+        printf("\nNhap n(n >= 1): ");
+        scanf("%d", &n);
 
-		if(n < 1)
-		{
-			printf("\nn phai >= 1. Xin nhap lai !");
-		}
-	}while(n < 1);
+        if(n < 1)
+        {
+            printf("\nn phai >= 1. Xin nhap lai !");
+        }
+    }while(n < 1);
 
-	i = 1;
-	S = 0;
+    i = 1;
+    S = 0;
 
-	while(i <= n)
-	{
-		S = sqrt(i + S);
-		i++;
-	}
-	printf("\nTong S = %f", S);
+    while(i <= n)
+    {
+        S = sqrt(i + S);
+        i++;
+    }
+    printf("\nTong S = %f", S);
 
-	getch();
-	return 0;
+    getch();
+    return 0;
 }

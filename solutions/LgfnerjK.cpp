@@ -8,11 +8,11 @@
 
 int main()
 {
-	char kytu;
-	for(kytu = 'A'; kytu <= 'Z'; kytu++)
-	{
-		printf("%4c", kytu);
-	}
-	getch();
-	return 0;
+    char kytu;
+    for(kytu = 'A'; kytu <= 'Z'; kytu++)
+    {
+        printf("%4c", kytu);
+    }
+    getch();
+    return 0;
 }

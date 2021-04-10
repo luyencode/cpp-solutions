@@ -8,24 +8,24 @@
 #include<math.h>
 int main()
 {
-	int themang, n;
-	int S;
+    int themang, n;
+    int S;
 
-	do
-	{
-	printf("\nNhap n: ");
-	scanf("%d", &n);
-	}while(n < 0 && printf("\nLoi: n >= 0 !"));
-	S = 0;
-	themang = n;
+    do
+    {
+    printf("\nNhap n: ");
+    scanf("%d", &n);
+    }while(n < 0 && printf("\nLoi: n >= 0 !"));
+    S = 0;
+    themang = n;
 
-	while(themang != 0)
-	{
-		S = S + themang % 10;
-		themang = themang / 10;
-	}
-	printf("\nTong la %d", S);
+    while(themang != 0)
+    {
+        S = S + themang % 10;
+        themang = themang / 10;
+    }
+    printf("\nTong la %d", S);
 
-	getch();
-	return 0;
+    getch();
+    return 0;
 }

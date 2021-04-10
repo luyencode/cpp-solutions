@@ -8,27 +8,27 @@
 
 int main()
 {
-	float a, b, c;
-	printf("\nNhap a: ");
-	scanf("%f", &a);
+    float a, b, c;
+    printf("\nNhap a: ");
+    scanf("%f", &a);
 
-	printf("\nNhap b: ");
-	scanf("%f", &b);
+    printf("\nNhap b: ");
+    scanf("%f", &b);
 
-	printf("\nNhap c: ");
-	scanf("%f", &c);
+    printf("\nNhap c: ");
+    scanf("%f", &c);
  
-	if(a < 0)
-	 a = -a;
-	if(b < 0)
-	 b = -b;
-	if(c < 0)
-	 c = -c;
+    if(a < 0)
+     a = -a;
+    if(b < 0)
+     b = -b;
+    if(c < 0)
+     c = -c;
 
-	 printf("\na = %f", a);
-	 printf("\nb = %f", b);
-	 printf("\nc = %f", c);
+     printf("\na = %f", a);
+     printf("\nb = %f", b);
+     printf("\nc = %f", c);
 
-	getch();
-	return 0;
+    getch();
+    return 0;
 }

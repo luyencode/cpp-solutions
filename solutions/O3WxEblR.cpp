@@ -9,9 +9,9 @@
 
 struct HonSo
 {
-	int Nguyen;
-	int Tu;
-	int Mau;
+    int Nguyen;
+    int Tu;
+    int Mau;
 };
 typedef struct HonSo HONSO;
 
@@ -30,122 +30,122 @@ void QuiDong2HonSo(HONSO, HONSO);
 // 523 Nhập hỗn số
 void NhapHonSo(HONSO &hs)
 {
-	printf("\nNhap phan nguyen: ");
-	scanf("%d", &hs.Nguyen);
+    printf("\nNhap phan nguyen: ");
+    scanf("%d", &hs.Nguyen);
 
-	printf("\nNhap tu so: ");
-	scanf("%d", &hs.Tu);
+    printf("\nNhap tu so: ");
+    scanf("%d", &hs.Tu);
 
-	printf("\nNhap mau so: ");
-	scanf("%d", &hs.Mau);
+    printf("\nNhap mau so: ");
+    scanf("%d", &hs.Mau);
 
 }
 
 // 524 Xuất hỗn số
 void XuatHonSo(HONSO hs)
 {
-	printf("%d(%d/%d)", hs.Nguyen, hs.Tu, hs.Mau);
+    printf("%d(%d/%d)", hs.Nguyen, hs.Tu, hs.Mau);
 }
 
 // 525 Rút gọn hỗn số
 int TimUCLN(int a, int b)
 {
-	if(a < 0)
-	{
-		a = a * -1;
-	}
-	if(b < 0)
-	{
-		b = b * -1;
-	}
+    if(a < 0)
+    {
+        a = a * -1;
+    }
+    if(b < 0)
+    {
+        b = b * -1;
+    }
 
-	if(a == 0 && b !=0)
-	{
-		return b;
-	}
-	else if( b == 0 && a != 0 )
-	{
-		return a;
-	}
+    if(a == 0 && b !=0)
+    {
+        return b;
+    }
+    else if( b == 0 && a != 0 )
+    {
+        return a;
+    }
 
-	while(a != b)
-	{
-		if(a > b)
-		{
-			a = a - b;
-		}
-		else
-			b = b - a;
-	}
-	return a;
+    while(a != b)
+    {
+        if(a > b)
+        {
+            a = a - b;
+        }
+        else
+            b = b - a;
+    }
+    return a;
 }
 
 HONSO RutGonHonSo(HONSO hs)
 {
-	if(hs.Tu > hs.Mau)
-	{
-		int temp = hs.Tu / hs.Mau;
-		hs.Nguyen += temp;
-		hs.Tu -= hs.Mau * temp;
-	}
-	int UCLN = TimUCLN(hs.Tu, hs.Mau);
-	hs.Tu /= UCLN;
-	hs.Mau /= UCLN;
-	return hs;
+    if(hs.Tu > hs.Mau)
+    {
+        int temp = hs.Tu / hs.Mau;
+        hs.Nguyen += temp;
+        hs.Tu -= hs.Mau * temp;
+    }
+    int UCLN = TimUCLN(hs.Tu, hs.Mau);
+    hs.Tu /= UCLN;
+    hs.Mau /= UCLN;
+    return hs;
 }
 
 // 526 Tính tổng 2 hỗn số
 HONSO TinhTong2HonSo(HONSO a, HONSO b)
 {
-	HONSO c;
-	c.Nguyen = a.Nguyen + b.Nguyen;
-	c.Tu = a.Tu * b.Mau + a.Mau * b.Tu;
-	c.Mau = a.Mau * b.Mau;
-	c = RutGonHonSo (c);
-	return c;
+    HONSO c;
+    c.Nguyen = a.Nguyen + b.Nguyen;
+    c.Tu = a.Tu * b.Mau + a.Mau * b.Tu;
+    c.Mau = a.Mau * b.Mau;
+    c = RutGonHonSo (c);
+    return c;
 }
 
 // 527 Tính hiệu 2 hỗn số
 HONSO TinhHieu2HonSo(HONSO a, HONSO b)
 {
-	HonSo c;
-	c.Nguyen = a.Nguyen - b.Nguyen;
-	c.Tu = a.Tu * b.Mau - a.Mau * b.Tu;
-	c.Mau = a.Mau * b.Mau;
-	c = RutGonHonSo (c);
-	return c;
+    HonSo c;
+    c.Nguyen = a.Nguyen - b.Nguyen;
+    c.Tu = a.Tu * b.Mau - a.Mau * b.Tu;
+    c.Mau = a.Mau * b.Mau;
+    c = RutGonHonSo (c);
+    return c;
 }
 
 // 528 Tính tích 2 hỗn số
 
 HONSO TinhTich2HonSo(HONSO a, HONSO b)
 {
-	// Đưa về dạng phân số
-	a.Tu = a.Tu + a.Nguyen * a.Mau;
-	b.Tu = b.Tu + b.Nguyen * b.Mau;
+    // Đưa về dạng phân số
+    a.Tu = a.Tu + a.Nguyen * a.Mau;
+    b.Tu = b.Tu + b.Nguyen * b.Mau;
 
-	HONSO c;
-	c.Nguyen = 0;
-	c.Tu = a.Tu * b.Tu;
-	c.Mau = a.Mau * b.Mau;
-	c = RutGonHonSo (c);
-	return c;
+    HONSO c;
+    c.Nguyen = 0;
+    c.Tu = a.Tu * b.Tu;
+    c.Mau = a.Mau * b.Mau;
+    c = RutGonHonSo (c);
+    return c;
 }
 
 // 529 Tính thương 2 hỗn số
 
 HONSO TinhThuong2HonSo(HONSO a, HONSO b)
 {
-	// Đưa về dạng phân số
-	a.Tu = a.Tu + a.Nguyen * a.Mau;
-	b.Tu = b.Tu + b.Nguyen * b.Mau;
+    // Đưa về dạng phân số
+    a.Tu = a.Tu + a.Nguyen * a.Mau;
+    b.Tu = b.Tu + b.Nguyen * b.Mau;
 
-	HONSO c;
-	c.Nguyen = 0;
-	c.Tu = a.Tu * b.Mau;
-	c.Mau = a.Mau * b.Tu;
-	c = RutGonHonSo (c);
-	return c;
+    HONSO c;
+    c.Nguyen = 0;
+    c.Tu = a.Tu * b.Mau;
+    c.Mau = a.Mau * b.Tu;
+    c = RutGonHonSo (c);
+    return c;
 }
 
 // 530 Kiểm tra hỗn số tối giản
@@ -169,38 +169,38 @@ void QuiDong2HonSo(HONSO &a, HONSO &b)
 
 int main()
 {
-	HONSO a, b;
-	NhapHonSo(a);
-	XuatHonSo(a);
+    HONSO a, b;
+    NhapHonSo(a);
+    XuatHonSo(a);
 
-	NhapHonSo(b);
-	XuatHonSo(b);
+    NhapHonSo(b);
+    XuatHonSo(b);
 
-	HONSO c = RutGonHonSo(a);
-	printf("\nRut gon hon so a: ");
-	XuatHonSo(c);
+    HONSO c = RutGonHonSo(a);
+    printf("\nRut gon hon so a: ");
+    XuatHonSo(c);
 
-	HONSO d = RutGonHonSo(b);
-	printf("\nRut gon hon so b: ");
-	XuatHonSo(d);
+    HONSO d = RutGonHonSo(b);
+    printf("\nRut gon hon so b: ");
+    XuatHonSo(d);
 
-	HONSO tong = TinhTong2HonSo(a, b);
-	printf("\nTong 2 hon so: ");
-	XuatHonSo(tong);
+    HONSO tong = TinhTong2HonSo(a, b);
+    printf("\nTong 2 hon so: ");
+    XuatHonSo(tong);
 
-	HONSO hieu = TinhHieu2HonSo(a, b);
-	printf("\nHieu 2 hon so: ");
-	XuatHonSo(hieu);
+    HONSO hieu = TinhHieu2HonSo(a, b);
+    printf("\nHieu 2 hon so: ");
+    XuatHonSo(hieu);
 
-	HONSO tich = TinhTich2HonSo(a, b);
-	printf("\nTich 2 hon so: ");
-	XuatHonSo(tich);
+    HONSO tich = TinhTich2HonSo(a, b);
+    printf("\nTich 2 hon so: ");
+    XuatHonSo(tich);
 
-	HONSO thuong = TinhThuong2HonSo(a, b);
-	printf("\nThuong 2 hon so: ");
-	XuatHonSo(thuong);
+    HONSO thuong = TinhThuong2HonSo(a, b);
+    printf("\nThuong 2 hon so: ");
+    XuatHonSo(thuong);
 
-	if (KiemTraHonSoToiGian(a))
+    if (KiemTraHonSoToiGian(a))
         printf("\nHon so a toi gian");
     else
         printf("\nHon so a chua toi gian");
@@ -211,6 +211,6 @@ int main()
     printf("\nb sau khi qui dong: ");
     XuatHonSo(b);
 
-	getch();
-	return 0;
+    getch();
+    return 0;
 }

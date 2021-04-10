@@ -8,18 +8,18 @@
 
 int main()
 {
-	long n, t;
-	int dem;
-	printf("\nNhap n: ");
-	scanf("%d", &n);
-	dem = 0;
-	t = n;
-	while(t != 0)
-	{
-		dem++;
-		t /= 10;
-	}
-	printf("\n%d", dem);
-	getch();
-	return 0;
+    long n, t;
+    int dem;
+    printf("\nNhap n: ");
+    scanf("%d", &n);
+    dem = 0;
+    t = n;
+    while(t != 0)
+    {
+        dem++;
+        t /= 10;
+    }
+    printf("\n%d", dem);
+    getch();
+    return 0;
 }

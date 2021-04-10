@@ -8,33 +8,33 @@
 
 int main()
 {
-	int i, n, max;
-	do
-	{
-	printf("\nNhap n(n > 0): ");
-	scanf("%d", &n);
-	  if(n <= 0)
-	   {
-		printf("\n N phai > 0. Xin nhap lai !");
-	   }
-	}while(n <= 0);
+    int i, n, max;
+    do
+    {
+    printf("\nNhap n(n > 0): ");
+    scanf("%d", &n);
+      if(n <= 0)
+       {
+        printf("\n N phai > 0. Xin nhap lai !");
+       }
+    }while(n <= 0);
     i = 1;
-	max = 1;
-	printf("\nCac uoc so le cua so %d la: ",n);
-	while(i <= n)
-	{
-		if((n % i == 0) && (i % 2 == 1))
-		{
-			if(i > max)
-			{
-			max = i;
-			}
-			printf("%4d", i);
-		}
-			i++;
-	}
-	printf("\nUoc so le lon nhat la %d", max);
+    max = 1;
+    printf("\nCac uoc so le cua so %d la: ",n);
+    while(i <= n)
+    {
+        if((n % i == 0) && (i % 2 == 1))
+        {
+            if(i > max)
+            {
+            max = i;
+            }
+            printf("%4d", i);
+        }
+            i++;
+    }
+    printf("\nUoc so le lon nhat la %d", max);
 
-	getch();
-	return 0;
+    getch();
+    return 0;
 }

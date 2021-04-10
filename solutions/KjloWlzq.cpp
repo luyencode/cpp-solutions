@@ -37,7 +37,7 @@ VD: kiểm tra số 12
 */
 int check(int n)
 {
-	int flag=1;
+    int flag=1;
     n = n < 0 ? -n : n;
     if(n < 2)
         return 1;
@@ -49,14 +49,14 @@ int check(int n)
         n /= 3;
     }
     return 1;*/
-	while(n > 1)
-	{
-		int du = n % 3;
-		if(du != 0)  // nếu dư mà khác 0. lập tức báo sai
-			flag = 0;
-		n /= 3;
-	}
-	if(flag==1)
+    while(n > 1)
+    {
+        int du = n % 3;
+        if(du != 0)  // nếu dư mà khác 0. lập tức báo sai
+            flag = 0;
+        n /= 3;
+    }
+    if(flag==1)
       return 1;
     else
       return 0;

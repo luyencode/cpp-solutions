@@ -9,29 +9,29 @@
 
 int main()
 {
-	int i, n;
-	int max, dem;
-	max = 0;
-	dem = 1;
-	do
-	{
-	printf("\nNhap n: ");
-	scanf("%d", &n);
-	}while(n < 0 && printf("\nLoi: n >= 0 !"));
-	if(n == 0)
-		dem = 1;
+    int i, n;
+    int max, dem;
+    max = 0;
+    dem = 1;
+    do
+    {
+    printf("\nNhap n: ");
+    scanf("%d", &n);
+    }while(n < 0 && printf("\nLoi: n >= 0 !"));
+    if(n == 0)
+        dem = 1;
 
-	do
-	{
-		i = n % 10;
-	   if(i == max)
-		   dem++;
-	   if(i > max)
-		   max = i;
-	}while(n /= 10);
-	printf("\nSo lon nhat la %d", max);
-	printf("\nSo luong chu so lon nhat la %d", dem);
+    do
+    {
+        i = n % 10;
+       if(i == max)
+           dem++;
+       if(i > max)
+           max = i;
+    }while(n /= 10);
+    printf("\nSo lon nhat la %d", max);
+    printf("\nSo luong chu so lon nhat la %d", dem);
 
-	getch();
-	return 0;
+    getch();
+    return 0;
 }

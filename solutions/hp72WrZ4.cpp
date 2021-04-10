@@ -9,64 +9,64 @@
 #define MAX 100
 void NhapMang(float a[][MAX], int &dong, int &cot)
 {
-	//Nhập số dòng
-	do
-	{
-		printf("\nNhap vao so dong: ");
-		// Cách tà đạo: scanf("dong =%d",&dong);  // Lúc nhập phải viết thêm  chữ ( dong =  ) ở khung console
-		scanf("%d",&dong);
+    //Nhập số dòng
+    do
+    {
+        printf("\nNhap vao so dong: ");
+        // Cách tà đạo: scanf("dong =%d",&dong);  // Lúc nhập phải viết thêm  chữ ( dong =  ) ở khung console
+        scanf("%d",&dong);
 
-		if(dong < 1 || dong > MAX)
-		{
-			printf("\nSo dong khong hop le. Xin kiem tra lai!");
-		}
+        if(dong < 1 || dong > MAX)
+        {
+            printf("\nSo dong khong hop le. Xin kiem tra lai!");
+        }
 
-	}while(dong < 1 || dong > MAX);
+    }while(dong < 1 || dong > MAX);
 
-	//Nhập số cột
-	do
-	{
-		printf("\nNhap vao so cot: ");
-		scanf("%d",&cot);
+    //Nhập số cột
+    do
+    {
+        printf("\nNhap vao so cot: ");
+        scanf("%d",&cot);
 
-		if(cot < 1 || cot > MAX)
-		{
-			printf("\nSo cot khong hop le. Xin kiem tra lai!");
+        if(cot < 1 || cot > MAX)
+        {
+            printf("\nSo cot khong hop le. Xin kiem tra lai!");
 
-		}
+        }
 
-	}while(cot < 1 || cot > MAX);
-	for(int i = 0; i < dong; i++)
-	{
-		for(int j = 0; j < cot; j++)
-		{
-			float temp;
-			printf("\nNhap a[%d][%d] = ", i, j);
-			scanf("%f", &temp);
-			a[i][j] = temp;
-		}
-	}
+    }while(cot < 1 || cot > MAX);
+    for(int i = 0; i < dong; i++)
+    {
+        for(int j = 0; j < cot; j++)
+        {
+            float temp;
+            printf("\nNhap a[%d][%d] = ", i, j);
+            scanf("%f", &temp);
+            a[i][j] = temp;
+        }
+    }
 }
 
 void XuatMang(float a[][MAX], int dong, int cot)
 {
-	for(int i = 0; i < dong; i++)
-	{
-		for(int j = 0; j < cot; j++)
-		{
-			printf("%8.3f", a[i][j]);
-		}
-		printf("\n\n");
-	}
+    for(int i = 0; i < dong; i++)
+    {
+        for(int j = 0; j < cot; j++)
+        {
+            printf("%8.3f", a[i][j]);
+        }
+        printf("\n\n");
+    }
 }
 
-/*			Chỉ số
+/*            Chỉ số
 -1
 Chỉ số: -1 0 | 1   2   3
 --------------
-1 |	1	2	3
-2 |	4	5	6
-3 |	7	8	9
+1 |    1    2    3
+2 |    4    5    6
+3 |    7    8    9
 
 */
 /*
@@ -76,54 +76,54 @@ loại trừ trường hợp i=0 và j=0 như trong lệnh if có ghi vì nó tr
 */
 bool KiemTraPhanTuCucTri(float a[][MAX], int sodong, int socot, int dong, int cot)
 {
-	bool CucDai = true, CucTieu = true;  
-	for(int i = -1; i <= 1; i++)
-	{
-		for(int j = -1; j <= 1; j++)
-		{
-			if(dong + i >= 0 && cot + j >= 0 && dong + i < sodong && cot + j < socot && !(i == 0 && j == 0))
-			{
-				if (a[dong][cot] <= a[dong + i][cot + j])
-				{
-					CucDai = false;
-				}
-				if (a[dong][cot] >= a[dong + i][cot + j])
-				{
-					CucTieu = false;
-				}
-				if(!CucDai && !CucTieu) break;
-			}
-		}
-	}
-	if(!CucDai && !CucTieu) return false;
-	return true;
+    bool CucDai = true, CucTieu = true;  
+    for(int i = -1; i <= 1; i++)
+    {
+        for(int j = -1; j <= 1; j++)
+        {
+            if(dong + i >= 0 && cot + j >= 0 && dong + i < sodong && cot + j < socot && !(i == 0 && j == 0))
+            {
+                if (a[dong][cot] <= a[dong + i][cot + j])
+                {
+                    CucDai = false;
+                }
+                if (a[dong][cot] >= a[dong + i][cot + j])
+                {
+                    CucTieu = false;
+                }
+                if(!CucDai && !CucTieu) break;
+            }
+        }
+    }
+    if(!CucDai && !CucTieu) return false;
+    return true;
 }
 float TinhTongCacPhanTuCucTri(float a[][MAX], int dong, int cot)
 {
-	float tong = 0;
-	for(int i = 0; i < dong; i++)
-	{
-		for(int j = 0; j < cot; j++)
-		{
-			if(KiemTraPhanTuCucTri(a, dong, cot, i, j))
-			{
-				tong += a[i][j];
-			}
-		}
-	}
-	return tong;
+    float tong = 0;
+    for(int i = 0; i < dong; i++)
+    {
+        for(int j = 0; j < cot; j++)
+        {
+            if(KiemTraPhanTuCucTri(a, dong, cot, i, j))
+            {
+                tong += a[i][j];
+            }
+        }
+    }
+    return tong;
 }
 
 int main()
 {
-	float a[MAX][MAX];
-	int dong, cot;
-	NhapMang(a, dong, cot);
-	XuatMang(a, dong, cot);
+    float a[MAX][MAX];
+    int dong, cot;
+    NhapMang(a, dong, cot);
+    XuatMang(a, dong, cot);
 
-	float tong = TinhTongCacPhanTuCucTri(a, dong, cot);
-	printf("\nTong cac phan tu cuc tri trong ma tran = %.3f", tong);
+    float tong = TinhTongCacPhanTuCucTri(a, dong, cot);
+    printf("\nTong cac phan tu cuc tri trong ma tran = %.3f", tong);
 
-	getch();
-	return 0;
+    getch();
+    return 0;
 }

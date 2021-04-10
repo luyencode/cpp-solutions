@@ -8,8 +8,8 @@
 
 struct DonThuc
 {
-	float a;
-	int n;
+    float a;
+    int n;
 };
 typedef struct DonThuc DONTHUC;
 
@@ -18,26 +18,26 @@ void XuatDonThuc(DONTHUC);
 
 void NhapDonThuc(DONTHUC &dt)
 {
-	float temp;
-	printf("\nNhap he so: ");
-	scanf("%f", &temp);
-	dt.a = temp;
+    float temp;
+    printf("\nNhap he so: ");
+    scanf("%f", &temp);
+    dt.a = temp;
 
-	printf("\nNhap bac don thuc: ");
-	scanf("%d", &dt.n);
+    printf("\nNhap bac don thuc: ");
+    scanf("%d", &dt.n);
 }
 
 void XuatDonThuc(DONTHUC dt)
 {
-	printf("%8.3fx^%d", dt.a, dt.n);
+    printf("%8.3fx^%d", dt.a, dt.n);
 }
 
 int main()
 {
-	DONTHUC dt;
-	NhapDonThuc(dt);
-	XuatDonThuc(dt);
+    DONTHUC dt;
+    NhapDonThuc(dt);
+    XuatDonThuc(dt);
 
-	getch();
-	return 0;
+    getch();
+    return 0;
 }

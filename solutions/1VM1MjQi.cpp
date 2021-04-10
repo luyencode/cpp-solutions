@@ -17,61 +17,61 @@ Ta cần biết
 
 float deQuy(float x, int n) // đệ quy
 {
-	if(n == 0)
-		return 1;
-	if(n == -1)
-		return 1.0/x;
-	if(n < 0)
-		return deQuy(x, n + 1) * 1.0 / x;
-	else if(n == 0)
-		return 1;
-	return deQuy(x, n - 1) * x;
+    if(n == 0)
+        return 1;
+    if(n == -1)
+        return 1.0/x;
+    if(n < 0)
+        return deQuy(x, n + 1) * 1.0 / x;
+    else if(n == 0)
+        return 1;
+    return deQuy(x, n - 1) * x;
 }
 
 float deQuyDuoi(float x, int n, float y = 1)  // đệ quy đuôi
 {
-	if(n == 0)
-		return y;
-	if(n < 0)
-		return deQuyDuoi(x, n + 1, y * 1.0 / x);
-	else if(n == 0)
-		return 1;
-	return deQuyDuoi(x, n - 1, y * x);
+    if(n == 0)
+        return y;
+    if(n < 0)
+        return deQuyDuoi(x, n + 1, y * 1.0 / x);
+    else if(n == 0)
+        return 1;
+    return deQuyDuoi(x, n - 1, y * x);
 }
 
 float khuDeQuy(float x, int n) // khử đệ quy
 {
-	bool Check = true; 
-	float tich = 1;
+    bool Check = true; 
+    float tich = 1;
 
-	if(n == 0)
-		return tich;
-	else if(n < 0)
-	{
-		Check = false;
-		n *= -1; // biến thành dương lại
-	}
+    if(n == 0)
+        return tich;
+    else if(n < 0)
+    {
+        Check = false;
+        n *= -1; // biến thành dương lại
+    }
 
-	for(int i = 1; i <= n; i++)
-	{
-		tich *= x; 
-	}
-	if(Check == true)
-		return tich;
-	return 1.0/tich;
+    for(int i = 1; i <= n; i++)
+    {
+        tich *= x; 
+    }
+    if(Check == true)
+        return tich;
+    return 1.0/tich;
 }
 int main()
 {
-	float x = 2;
-	int n;
-	printf("\nNhap n: "); scanf("%d", &n);
+    float x = 2;
+    int n;
+    printf("\nNhap n: "); scanf("%d", &n);
 
-	printf("\nKhu de quy(%f, %d) = %f", x, n, khuDeQuy(x, n));
-	printf("\nDe quy(%f, %d) = %f", x, n, deQuy(x, n));
-	printf("\nDe quy duoi(%f, %d) = %f", x, n, deQuyDuoi(x, n));
+    printf("\nKhu de quy(%f, %d) = %f", x, n, khuDeQuy(x, n));
+    printf("\nDe quy(%f, %d) = %f", x, n, deQuy(x, n));
+    printf("\nDe quy duoi(%f, %d) = %f", x, n, deQuyDuoi(x, n));
 
-	
-	 
-	getch();
-	return 0;
+    
+     
+    getch();
+    return 0;
 }

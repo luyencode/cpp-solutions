@@ -10,38 +10,38 @@ float luythua(float, int);
 
 float luythua(float x, int n)
 {
-	float t = 1;
-	for(int i = 1; i <= n; i++)
-	{
-		t = t * x;
-	}
-	return t;
+    float t = 1;
+    for(int i = 1; i <= n; i++)
+    {
+        t = t * x;
+    }
+    return t;
 }
 
 float tong(float x, int n)
 {
-	float s = 0;
-	for(int i = 1; i <= n; i++)
-	{
-		s = s + luythua(x, i);
-	}
-	return s;
+    float s = 0;
+    for(int i = 1; i <= n; i++)
+    {
+        s = s + luythua(x, i);
+    }
+    return s;
 }
 
 int main()
 {
-	int n;
-	float x;
+    int n;
+    float x;
 
-	printf("\nNhap n: ");
-	scanf("%d", &n);
+    printf("\nNhap n: ");
+    scanf("%d", &n);
 
-	printf("\nNhap x: ");
-	scanf("%f", &x);
+    printf("\nNhap x: ");
+    scanf("%f", &x);
 
-	float ketqua = tong(x, n);
-	printf("\nTong: %f",ketqua);
+    float ketqua = tong(x, n);
+    printf("\nTong: %f",ketqua);
 
-	getch();
-	return 0;
+    getch();
+    return 0;
 }

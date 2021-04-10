@@ -13,35 +13,35 @@ float DiemTrungBinh;
 
 void Nhap()
 {
-	fflush(stdin);
-	printf("\nNhap ho ten: ");
-	gets(hoten);
+    fflush(stdin);
+    printf("\nNhap ho ten: ");
+    gets(hoten);
 
-	printf("\nNhap toan: ");
-	scanf("%d", &toan);
+    printf("\nNhap toan: ");
+    scanf("%d", &toan);
 
-	printf("\nNhap van: ");
-	scanf("%d", &van);
+    printf("\nNhap van: ");
+    scanf("%d", &van);
 }
 
 void XuLy()
 {
-	DiemTrungBinh = (toan + van) / 2.0;
+    DiemTrungBinh = (toan + van) / 2.0;
 }
 
 void Xuat()
 {
-	printf("\nHo ten: %s", hoten);
-	printf("\nToan: %d", toan);
-	printf("\nVan: %d", van);
-	printf("\nDiem Trung Binh: %f", DiemTrungBinh);
+    printf("\nHo ten: %s", hoten);
+    printf("\nToan: %d", toan);
+    printf("\nVan: %d", van);
+    printf("\nDiem Trung Binh: %f", DiemTrungBinh);
 }
 int main()
 {
-	Nhap();
-	XuLy();
-	Xuat();
+    Nhap();
+    XuLy();
+    Xuat();
 
-	getch();
-	return 0;
+    getch();
+    return 0;
 }

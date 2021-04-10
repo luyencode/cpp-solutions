@@ -10,28 +10,28 @@
 
 void nhap (int a[], int &n)
 {
-	do
-	{
-		printf("\nNhap so phan tu: ");
-		scanf("%d", &n);
-		if(n <= 0 || n > MAX)
-		{
-			printf("\nSo phan tu khong hop le. Xin kiem tra lai !");
-		}
-	}while(n <= 0 || n > MAX);
-	for(int i = 0; i < n; i++)
-	{
-		printf("\nNhap a[%d]: ", i);
-		scanf("%d", &a[i]);
-	}
+    do
+    {
+        printf("\nNhap so phan tu: ");
+        scanf("%d", &n);
+        if(n <= 0 || n > MAX)
+        {
+            printf("\nSo phan tu khong hop le. Xin kiem tra lai !");
+        }
+    }while(n <= 0 || n > MAX);
+    for(int i = 0; i < n; i++)
+    {
+        printf("\nNhap a[%d]: ", i);
+        scanf("%d", &a[i]);
+    }
 }
 
 void xuat(int a[], int n)
 {
-	for(int i = 0; i < n; i++)
-	{
-		printf("%4d", a[i]);
-	}
+    for(int i = 0; i < n; i++)
+    {
+        printf("%4d", a[i]);
+    }
 }
 /*
 Khái niệm hoán vị diễn tả ý tưởng rằng những đối tượng phân biệt có thể được sắp xếp theo những thứ tự khác nhau.
@@ -41,57 +41,57 @@ Một hoán vị như thế là: "3, 4, 6, 1, 2, 5".
 */
 void HoanVi(int &a, int &b)
 {
-	int temp = a;
-	a = b;
-	b = temp;
+    int temp = a;
+    a = b;
+    b = temp;
 }
 void SapXepTangDan(int a[], int n)
 {
-	for(int i = 0; i < n - 1; i++)
-	{
-		for(int j = i + 1; j < n; j++)
-		{
-			if(a[i] > a[j])
-			{
-				HoanVi(a[i], a[j]);
-			}
-		}
-	}
+    for(int i = 0; i < n - 1; i++)
+    {
+        for(int j = i + 1; j < n; j++)
+        {
+            if(a[i] > a[j])
+            {
+                HoanVi(a[i], a[j]);
+            }
+        }
+    }
 }
 
 void KiemTraBCoPhaiLaHoanViCuaA(int a[],int b[], int na, int nb)
 {
-	if(na != nb)
-	{
-		printf("\nKhong phai");      // Số lượng phần tử phải bằng nhau
-		return;
-	}
-	SapXepTangDan(a, na);           // Sắp xếp mảng a
-	SapXepTangDan(b, nb);           // Sắp xếp mảng b
-	for(int i = 0; i < na; i++)
-	{
-		if(a[i] != b[i])              
-		{
-			printf("\nKhong phai");
-			return;
-		}
-	}
-	printf("\nPhai");
-	return;
+    if(na != nb)
+    {
+        printf("\nKhong phai");      // Số lượng phần tử phải bằng nhau
+        return;
+    }
+    SapXepTangDan(a, na);           // Sắp xếp mảng a
+    SapXepTangDan(b, nb);           // Sắp xếp mảng b
+    for(int i = 0; i < na; i++)
+    {
+        if(a[i] != b[i])              
+        {
+            printf("\nKhong phai");
+            return;
+        }
+    }
+    printf("\nPhai");
+    return;
 }
 int main()
 {
-	int na, nb;
-	int a[MAX], b[MAX];
+    int na, nb;
+    int a[MAX], b[MAX];
 
-	nhap(a, na);
-	xuat(a, na);
+    nhap(a, na);
+    xuat(a, na);
 
-	nhap(b, nb);
-	xuat(b, nb);
+    nhap(b, nb);
+    xuat(b, nb);
 
-	KiemTraBCoPhaiLaHoanViCuaA(a, b, na, nb);
+    KiemTraBCoPhaiLaHoanViCuaA(a, b, na, nb);
 
-	getch();
-	return 0;
+    getch();
+    return 0;
 }

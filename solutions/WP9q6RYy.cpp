@@ -10,52 +10,52 @@
 
 void nhap (int a[], int &n)
 {
-	do
-	{
-		printf("\nNhap so phan tu: ");
-		scanf("%d", &n);
-		if(n <= 0 || n > MAX)
-		{
-			printf("\nSo phan tu khong hop le. Xin kiem tra lai !");
-		}
-	}while(n <= 0 || n > MAX);
-	for(int i = 0; i < n; i++)
-	{
-		printf("\nNhap a[%d]: ", i);
-		scanf("%d", &a[i]);
-	}
+    do
+    {
+        printf("\nNhap so phan tu: ");
+        scanf("%d", &n);
+        if(n <= 0 || n > MAX)
+        {
+            printf("\nSo phan tu khong hop le. Xin kiem tra lai !");
+        }
+    }while(n <= 0 || n > MAX);
+    for(int i = 0; i < n; i++)
+    {
+        printf("\nNhap a[%d]: ", i);
+        scanf("%d", &a[i]);
+    }
 }
 
 void xuat(int a[], int n)
 {
-	for(int i = 0; i < n; i++)
-	{
-		printf("%4d", a[i]);
-	}
+    for(int i = 0; i < n; i++)
+    {
+        printf("%4d", a[i]);
+    }
 }
 
 int TinhTongCacPhanTuLonHonTriTuyetDoiCuaPhanTuDungLienSauNo(int a[], int n)
 {
-	int Tong = 0;
-	for(int i = 0; i < n; i++)
-	{
-		if(a[i] > abs(a[i + 1]))
-		{
-			Tong += a[i];
-		}
-	}
-	return Tong;
+    int Tong = 0;
+    for(int i = 0; i < n; i++)
+    {
+        if(a[i] > abs(a[i + 1]))
+        {
+            Tong += a[i];
+        }
+    }
+    return Tong;
 }
 int main()
 {
-	int n;
-	int a[MAX];
+    int n;
+    int a[MAX];
 
-	nhap(a, n);
-	xuat(a, n);
-	int tong = TinhTongCacPhanTuLonHonTriTuyetDoiCuaPhanTuDungLienSauNo(a, n);
-	printf("\nTong bang %d", tong);
+    nhap(a, n);
+    xuat(a, n);
+    int tong = TinhTongCacPhanTuLonHonTriTuyetDoiCuaPhanTuDungLienSauNo(a, n);
+    printf("\nTong bang %d", tong);
 
-	getch();
-	return 0;
+    getch();
+    return 0;
 }

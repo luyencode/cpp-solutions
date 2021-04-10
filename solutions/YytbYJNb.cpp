@@ -8,44 +8,44 @@
 
 struct HocSinh
 {
-	char HoTen[30];
-	int DiemToan, DiemVan;
-	float DiemTB;
+    char HoTen[30];
+    int DiemToan, DiemVan;
+    float DiemTB;
 };
 typedef struct HocSinh HOCSINH;
 
 void NhapHocSinh(HOCSINH &a)
 {
 
-	fflush(stdin);
-	printf("Nhap ten hoc sinh: \n");
-	gets(a.HoTen);
+    fflush(stdin);
+    printf("Nhap ten hoc sinh: \n");
+    gets(a.HoTen);
 
-	printf("Nhap diem toan: \n");
-	scanf("%d", &a.DiemToan);
+    printf("Nhap diem toan: \n");
+    scanf("%d", &a.DiemToan);
 
-	printf("Nhap diem toan: \n");
-	scanf("%d", &a.DiemVan);
+    printf("Nhap diem toan: \n");
+    scanf("%d", &a.DiemVan);
 
 }
 float TinhDiemTB(HOCSINH a)
 {
-	return (float)(a.DiemToan + a.DiemVan) / 2;
+    return (float)(a.DiemToan + a.DiemVan) / 2;
 }
 void XuatHocSinh(HOCSINH a)
 {
-	printf("Ten hoc sinh: %s\n", a.HoTen);
-	printf("Diem toan: %d\n", a.DiemToan);
-	printf("Diem van: %d\n", a.DiemVan);
-	printf("Diem trung binh: %.2f", TinhDiemTB(a)); 
+    printf("Ten hoc sinh: %s\n", a.HoTen);
+    printf("Diem toan: %d\n", a.DiemToan);
+    printf("Diem van: %d\n", a.DiemVan);
+    printf("Diem trung binh: %.2f", TinhDiemTB(a)); 
 }
 
 int main()
 {
-	HOCSINH a;
-	NhapHocSinh(a);
-	XuatHocSinh(a);
+    HOCSINH a;
+    NhapHocSinh(a);
+    XuatHocSinh(a);
 
-	getch();
-	return 0;
+    getch();
+    return 0;
 }

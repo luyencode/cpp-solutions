@@ -9,8 +9,8 @@
 //540 khai báo dữ liệu điểm OXY
 struct Diem
 {
-	float X;
-	float Y;
+    float X;
+    float Y;
 };
 typedef struct Diem DIEM;
 
@@ -36,36 +36,36 @@ bool KiemTraDiemThuocPhanTu4(DIEM);
 // 541 Nhập tọa độ điểm trong mặt phẳng
 void NhapDiem(DIEM &a)
 {
-	printf("\nNhap X: ");
-	scanf("%f", &a.X);
+    printf("\nNhap X: ");
+    scanf("%f", &a.X);
 
-	printf("\nNhap Y: ");
-	scanf("%f", &a.Y);
+    printf("\nNhap Y: ");
+    scanf("%f", &a.Y);
 };
 
 // 542 Xuất tọa độ điểm trong mặt phẳng
 void XuatDiem(DIEM a)
 {
-	printf("<%.2f, %.2f>", a.X, a.Y);
+    printf("<%.2f, %.2f>", a.X, a.Y);
 }
 
 // 543 Tính khoảng cách giữa 2 điểm
 
 float TinhKhoangCachGiua2Diem(DIEM a, DIEM b)
 {
-	return sqrt(pow((b.X - a.X), 2) + pow((b.Y - a.Y), 2));
+    return sqrt(pow((b.X - a.X), 2) + pow((b.Y - a.Y), 2));
 }
 
 // 544 Tính khoảng cách giữa 2 điểm theo phương Ox
 float TinhKhoangCachGiua2DiemTheoOx(DIEM a, DIEM b)
 {
-	return fabs(a.X - b.X);
+    return fabs(a.X - b.X);
 }
 
 // 545 Tính khoảng cách giữa 2 điểm theo phương Oy
 float TinhKhoangCachGiua2DiemTheoOy(DIEM a, DIEM b)
 {
-	return fabs(a.Y - b.Y);
+    return fabs(a.Y - b.Y);
 }
 
 //546 Tìm tọa độ điểm đối xứng qua gốc tọa độ
@@ -147,59 +147,59 @@ bool KiemTraDiemThuocPhanTu4(DIEM a)
 
 int main()
 {
-	DIEM a, b;
-	NhapDiem(a);
-	XuatDiem(a);
+    DIEM a, b;
+    NhapDiem(a);
+    XuatDiem(a);
 
-	NhapDiem(b);
-	XuatDiem(b);
+    NhapDiem(b);
+    XuatDiem(b);
 
-	float khoangcach = TinhKhoangCachGiua2Diem(a, b);
-	printf("\nKhoang cach giua 2 diem A, B = %.2f", khoangcach);
+    float khoangcach = TinhKhoangCachGiua2Diem(a, b);
+    printf("\nKhoang cach giua 2 diem A, B = %.2f", khoangcach);
 
-	float khoangcachOx = TinhKhoangCachGiua2DiemTheoOx(a, b);
-	printf("\nKhoang cach giua 2 diem A,B theo Ox = %.2f", khoangcachOx);
+    float khoangcachOx = TinhKhoangCachGiua2DiemTheoOx(a, b);
+    printf("\nKhoang cach giua 2 diem A,B theo Ox = %.2f", khoangcachOx);
 
-	float khoangcachOy = TinhKhoangCachGiua2DiemTheoOy(a, b);
-	printf("\nKhoang cach giua 2 diem A,B theo Oy = %.2f", khoangcachOy);
+    float khoangcachOy = TinhKhoangCachGiua2DiemTheoOy(a, b);
+    printf("\nKhoang cach giua 2 diem A,B theo Oy = %.2f", khoangcachOy);
 
-	DIEM c = TimDiemDoiXungQuaO(a);
-	printf("\nDiem C doi xung diem A qua O: ");
-	XuatDiem(c);
+    DIEM c = TimDiemDoiXungQuaO(a);
+    printf("\nDiem C doi xung diem A qua O: ");
+    XuatDiem(c);
 
-	DIEM d = TimDiemDoiXungQuaOx(b);
-	printf("\nDiem D doi xung diem B qua Ox: ");
-	XuatDiem(d);
+    DIEM d = TimDiemDoiXungQuaOx(b);
+    printf("\nDiem D doi xung diem B qua Ox: ");
+    XuatDiem(d);
 
-	DIEM e = TimDiemDoiXungQuaOy(a);
-	printf("\nDiem E doi xung diem A qua Oy: ");
-	XuatDiem(e);
+    DIEM e = TimDiemDoiXungQuaOy(a);
+    printf("\nDiem E doi xung diem A qua Oy: ");
+    XuatDiem(e);
 
-	DIEM f = TimDiemDoiXungQuaPhanGiac1(a);
-	printf("\nDiem F doi xung diem A qua duong y = x: ");
-	XuatDiem(f);
+    DIEM f = TimDiemDoiXungQuaPhanGiac1(a);
+    printf("\nDiem F doi xung diem A qua duong y = x: ");
+    XuatDiem(f);
 
-	DIEM g = TimDiemDoiXungQuaPhanGiac2(b);
-	printf("\nDiem G doi xung diem B qua duong y = -x: ");
-	XuatDiem(g);
+    DIEM g = TimDiemDoiXungQuaPhanGiac2(b);
+    printf("\nDiem G doi xung diem B qua duong y = -x: ");
+    XuatDiem(g);
 
-	if (KiemTraDiemThuocPhanTu1(a))
-	printf("\na thuoc phan tu thu 1");
-	else
-	printf("\na ko thuoc phan tu thu 1");
-	if (KiemTraDiemThuocPhanTu2(a))
-	printf("\na thuoc phan tu thu 2");
-	else
-	printf("\na ko thuoc phan tu thu 2");
-	if (KiemTraDiemThuocPhanTu3(a))
-	printf("\na thuoc phan tu thu 3");
-	else
-	printf("\na ko thuoc phan tu thu 3");
-	if (KiemTraDiemThuocPhanTu4(a))
-	printf("\na thuoc phan tu thu 4");
-	else
-	printf("\na ko thuoc phan tu thu 4");
+    if (KiemTraDiemThuocPhanTu1(a))
+    printf("\na thuoc phan tu thu 1");
+    else
+    printf("\na ko thuoc phan tu thu 1");
+    if (KiemTraDiemThuocPhanTu2(a))
+    printf("\na thuoc phan tu thu 2");
+    else
+    printf("\na ko thuoc phan tu thu 2");
+    if (KiemTraDiemThuocPhanTu3(a))
+    printf("\na thuoc phan tu thu 3");
+    else
+    printf("\na ko thuoc phan tu thu 3");
+    if (KiemTraDiemThuocPhanTu4(a))
+    printf("\na thuoc phan tu thu 4");
+    else
+    printf("\na ko thuoc phan tu thu 4");
 
-	getch();
-	return 0;
+    getch();
+    return 0;
 }

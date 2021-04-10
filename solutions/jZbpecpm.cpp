@@ -8,36 +8,36 @@
 #include<math.h>
 int main()
 {
-	int i, n;
-	float x, S, T;
-	long M, N;
-	printf("\nNhap x: ");
-	scanf("%f", &x);
-	do
-	{
-	printf("\nNhap n(n >= 1) : ");
-	scanf("%d", &n);
-	  if(n < 1)
-	  {
-		  printf("\n N phai >= 1. Xin nhap lai !");
-	  }
+    int i, n;
+    float x, S, T;
+    long M, N;
+    printf("\nNhap x: ");
+    scanf("%f", &x);
+    do
+    {
+    printf("\nNhap n(n >= 1) : ");
+    scanf("%d", &n);
+      if(n < 1)
+      {
+          printf("\n N phai >= 1. Xin nhap lai !");
+      }
 
-	}while(n < 1);
+    }while(n < 1);
 
-	S = 1;
-	N = 1;
-	i = 1;
+    S = 1;
+    N = 1;
+    i = 1;
 
-	while(i <= n)
-	{
-		
-		T = pow(x, (2 * i + 1));
-		M = i * 2 + 1;
-		N = N * M * (M - 1);
-		S = S + pow(-1, (float)(i + 1)) * T/N ;
-		i++;
-	}
-	printf("\nTong la %f", S - x);
-	getch();
-	return 0;
+    while(i <= n)
+    {
+        
+        T = pow(x, (2 * i + 1));
+        M = i * 2 + 1;
+        N = N * M * (M - 1);
+        S = S + pow(-1, (float)(i + 1)) * T/N ;
+        i++;
+    }
+    printf("\nTong la %f", S - x);
+    getch();
+    return 0;
 }

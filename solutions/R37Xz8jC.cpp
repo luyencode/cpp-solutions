@@ -8,40 +8,40 @@
 
 int main()
 {
-	int i, j, m, n;
+    int i, j, m, n;
 
-	printf("\nNhap m: ");
-	scanf("%d", &m);
+    printf("\nNhap m: ");
+    scanf("%d", &m);
 
-	// Câu a
-	printf("\nNhap n: ");
-	scanf("%d", &n);
+    // Câu a
+    printf("\nNhap n: ");
+    scanf("%d", &n);
 
-	for(i = 1; i <= m; ++i)
-	{
-		for(j = 1; j <= n; ++j) 
-		{
-			printf("*");
-		}
-		printf("\n"); //xuong dong khi in xong 1 hang 
-	}
+    for(i = 1; i <= m; ++i)
+    {
+        for(j = 1; j <= n; ++j) 
+        {
+            printf("*");
+        }
+        printf("\n"); //xuong dong khi in xong 1 hang 
+    }
 
-	printf( "\n" );
+    printf( "\n" );
 
-	for(i = 1; i <= m; ++i)
-	{
-		for(j = 1; j <= n; ++j) 
-		{
-			if( i == 1 || i == m || j == 1 || j == n )
-			{
-				printf("*");
-				if(j == n)
-				printf( "\n" );
-			}
-			else
-				printf(" "); 
-		}
-	}
-	getch();
-	return 0;
+    for(i = 1; i <= m; ++i)
+    {
+        for(j = 1; j <= n; ++j) 
+        {
+            if( i == 1 || i == m || j == 1 || j == n )
+            {
+                printf("*");
+                if(j == n)
+                printf( "\n" );
+            }
+            else
+                printf(" "); 
+        }
+    }
+    getch();
+    return 0;
 }

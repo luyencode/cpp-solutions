@@ -8,9 +8,9 @@
 
 struct HonSo
 {
-	int Tu;
-	int Mau;
-	int Nguyen;
+    int Tu;
+    int Mau;
+    int Nguyen;
 };
 typedef struct HonSo HONSO;
 
@@ -19,27 +19,27 @@ void XuatHonSo(HONSO);
 
 void NhapHonSo(HONSO &hs)
 {
-	printf("\nNhap nguyen: ");
-	scanf("%d", &hs.Nguyen);
+    printf("\nNhap nguyen: ");
+    scanf("%d", &hs.Nguyen);
 
-	printf("\nNhap tu so: ");
-	scanf("%d", &hs.Tu);
+    printf("\nNhap tu so: ");
+    scanf("%d", &hs.Tu);
 
-	printf("\nNhap mau so: ");
-	scanf("%d", &hs.Mau);
+    printf("\nNhap mau so: ");
+    scanf("%d", &hs.Mau);
 }
 
 void XuatHonSo(HONSO hs)
 {
-	printf("%d(%d/%d)", hs.Nguyen, hs.Tu, hs.Mau);
+    printf("%d(%d/%d)", hs.Nguyen, hs.Tu, hs.Mau);
 }
 
 int main()
 {
-	HONSO hs;
-	NhapHonSo(hs);
-	XuatHonSo(hs);
+    HONSO hs;
+    NhapHonSo(hs);
+    XuatHonSo(hs);
 
-	getch();
-	return 0;
+    getch();
+    return 0;
 }

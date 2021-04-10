@@ -7,21 +7,21 @@
 using namespace std;
 struct Diem
 {
-	float X;
-	float Y;
+    float X;
+    float Y;
 };
 typedef struct Diem DIEM;
 
 struct Node
 {
-	DIEM data;
-	struct Node* pNext;
+    DIEM data;
+    struct Node* pNext;
 };
 typedef struct node NODE;
 
 struct list
 {
-	NODE* pHead;
-	NODE* pTail;
+    NODE* pHead;
+    NODE* pTail;
 };
 typedef struct list LIST;

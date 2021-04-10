@@ -9,69 +9,69 @@
 #define MAX 100
 void NhapMaTran(int a[][MAX], int &n)
 {
-	do
-	{
-		printf("\nNhap n: ");
-		scanf("%d", &n);
-		if(n < 1 || n > MAX)
-		{
-			printf("\nSo phan tu khong hop le. Xin kiem tra lai !");
-		}
-	}while(n < 1 || n > MAX);
+    do
+    {
+        printf("\nNhap n: ");
+        scanf("%d", &n);
+        if(n < 1 || n > MAX)
+        {
+            printf("\nSo phan tu khong hop le. Xin kiem tra lai !");
+        }
+    }while(n < 1 || n > MAX);
 
-	for(int i = 0; i < n; i++)
-	{
-		for(int j = 0; j < n; j++)
-		{
-			printf("\nNhap vao a[%d][%d] = ", i, j);
-			scanf("%d", &a[i][j]);
-		}
-	}
+    for(int i = 0; i < n; i++)
+    {
+        for(int j = 0; j < n; j++)
+        {
+            printf("\nNhap vao a[%d][%d] = ", i, j);
+            scanf("%d", &a[i][j]);
+        }
+    }
 }
 
 void XuatMaTran(int a[][MAX], int n)
 {
-	for(int i = 0; i < n; i++)
-	{
-		for(int j = 0; j < n; j++)
-		{
-			printf("%4d",a[i][j]);
-		}
-		printf("\n\n");
-	}
+    for(int i = 0; i < n; i++)
+    {
+        for(int j = 0; j < n; j++)
+        {
+            printf("%4d",a[i][j]);
+        }
+        printf("\n\n");
+    }
 }
 
 int KiemTraTonTaiChanNhoHon2015(int a[][MAX], int n)
 {
-	int flag = 0;
-	for(int i = 0; i < n; i++)
-	{
-		for(int j = 0; j < n; j++)
-		{
-			if(a[i][j] % 2 == 0 && a[i][j] < 2015)
-			{
-				flag = 1;
-			}
-		}
-	}
-	return flag;
+    int flag = 0;
+    for(int i = 0; i < n; i++)
+    {
+        for(int j = 0; j < n; j++)
+        {
+            if(a[i][j] % 2 == 0 && a[i][j] < 2015)
+            {
+                flag = 1;
+            }
+        }
+    }
+    return flag;
 }
 int main()
 {
-	int a[MAX][MAX], n;
-	NhapMaTran(a,n);
-	XuatMaTran(a,n);
+    int a[MAX][MAX], n;
+    NhapMaTran(a,n);
+    XuatMaTran(a,n);
 
-	int flag = KiemTraTonTaiChanNhoHon2015(a, n);
-	if(flag == 1)
-	{
-		printf("\nTon tai gia tri chan nho hon 2015");
-	}
-	else
-	{
-		printf("\nKhong tim thay gia tri thoa DK");
-	}
+    int flag = KiemTraTonTaiChanNhoHon2015(a, n);
+    if(flag == 1)
+    {
+        printf("\nTon tai gia tri chan nho hon 2015");
+    }
+    else
+    {
+        printf("\nKhong tim thay gia tri thoa DK");
+    }
 
-	getch();
-	return 0;
+    getch();
+    return 0;
 }

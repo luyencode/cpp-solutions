@@ -17,26 +17,26 @@ void XuatNgay(NGAY);
 
 void NhapNgay(NGAY &ng)
 {
-	printf("\nNhap ngay: ");
-	scanf("%d", &ng.Day);
+    printf("\nNhap ngay: ");
+    scanf("%d", &ng.Day);
 
-	printf("\nNhap thang: ");
-	scanf("%d", &ng.Month);
+    printf("\nNhap thang: ");
+    scanf("%d", &ng.Month);
 
-	printf("\nNhap nam: ");
-	scanf("%d", &ng.Year);
+    printf("\nNhap nam: ");
+    scanf("%d", &ng.Year);
 }
 void XuatNgay(NGAY ng)
 {
-	printf("\n%d-%d-%d",ng.Day, ng.Month, ng.Year);
+    printf("\n%d-%d-%d",ng.Day, ng.Month, ng.Year);
 }
 
 int main()
 {
-	NGAY ng;
-	NhapNgay(ng);
-	XuatNgay(ng);
+    NGAY ng;
+    NhapNgay(ng);
+    XuatNgay(ng);
 
-	getch();
-	return 0;
+    getch();
+    return 0;
 }

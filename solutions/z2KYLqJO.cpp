@@ -10,28 +10,28 @@
 
 void nhap (int a[], int &n)
 {
-	do
-	{
-		printf("\nNhap so phan tu: ");
-		scanf("%d", &n);
-		if(n <= 0 || n > MAX)
-		{
-			printf("\nSo phan tu khong hop le. Xin kiem tra lai !");
-		}
-	}while(n <= 0 || n > MAX);
-	for(int i = 0; i < n; i++)
-	{
-		printf("\nNhap a[%d]: ", i);
-		scanf("%d", &a[i]);
-	}
+    do
+    {
+        printf("\nNhap so phan tu: ");
+        scanf("%d", &n);
+        if(n <= 0 || n > MAX)
+        {
+            printf("\nSo phan tu khong hop le. Xin kiem tra lai !");
+        }
+    }while(n <= 0 || n > MAX);
+    for(int i = 0; i < n; i++)
+    {
+        printf("\nNhap a[%d]: ", i);
+        scanf("%d", &a[i]);
+    }
 }
 
 void xuat(int a[], int n)
 {
-	for(int i = 0; i < n; i++)
-	{
-		printf("%4d", a[i]);
-	}
+    for(int i = 0; i < n; i++)
+    {
+        printf("%4d", a[i]);
+    }
 }
 
 /*
@@ -41,38 +41,38 @@ void xuat(int a[], int n)
 */
 int TimSoHangChuc5(int n)
 {
-	n = abs(n);
-	n = n / 10;
-	int hangchuc = n % 10;
-	if(hangchuc == 5)
-	{
-		return 1;
-	}
-	return 0;
+    n = abs(n);
+    n = n / 10;
+    int hangchuc = n % 10;
+    if(hangchuc == 5)
+    {
+        return 1;
+    }
+    return 0;
 }
 
 int TinhTongSoHangChuc5(int a[], int n)
 {
-	int Tong = 0;
-	for(int i = 0; i < n; i++)
-	{
-		if(TimSoHangChuc5(a[i]) == 1)
-		{
-			Tong += a[i];
-		}
-	}
-	return Tong;
+    int Tong = 0;
+    for(int i = 0; i < n; i++)
+    {
+        if(TimSoHangChuc5(a[i]) == 1)
+        {
+            Tong += a[i];
+        }
+    }
+    return Tong;
 }
 int main()
 {
-	int n;
-	int a[MAX];
+    int n;
+    int a[MAX];
 
-	nhap(a, n);
-	xuat(a, n);
-	int TongChuc5 = TinhTongSoHangChuc5(a, n);
-	printf("\nTong cac phan tu co chu so hang chuc la 5: %d", TongChuc5);
+    nhap(a, n);
+    xuat(a, n);
+    int TongChuc5 = TinhTongSoHangChuc5(a, n);
+    printf("\nTong cac phan tu co chu so hang chuc la 5: %d", TongChuc5);
 
-	getch();
-	return 0;
+    getch();
+    return 0;
 }

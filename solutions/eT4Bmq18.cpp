@@ -8,14 +8,14 @@ using namespace std;
 
 struct node
 {
-	KieuDuLieu Info;
-	struct node* pnext;
+    KieuDuLieu Info;
+    struct node* pnext;
 };
 typedef struct node NODE;
 
 struct list
 {
-	NODE* pHead;
-	NODE* pTail;
+    NODE* pHead;
+    NODE* pTail;
 };
 typedef struct list LIST;

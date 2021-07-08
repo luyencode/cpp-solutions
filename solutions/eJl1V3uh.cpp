@@ -8,23 +8,22 @@
 #include<math.h>
 int main()
 {
-    long themang, n;
+    long n;
     int sochuso;
-
+    
+    // Nhap so n
     do
     {
     printf("\nNhap n: ");
     scanf("%ld", &n);
     }while(n < 0 && printf("\nLoi: n >= 0 !"));
-    sochuso = 0;
-    themang = n;
+    sochuso = 1;  //so chu so mac dinh de la 1 neu n < 1
 
-    if(n == 0)
-            sochuso = 1;
-    while(themang != 0)
+    //Kiem tra so chu so cua n
+    while(n >= 10)
     {
         sochuso = sochuso + 1;
-        themang = themang / 10;
+        n = n / 10;
     }
     printf("\nSo chu so cua %ld la %d", n, sochuso);
 
